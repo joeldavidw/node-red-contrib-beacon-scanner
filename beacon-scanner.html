@@ -1,0 +1,35 @@
+<script type="text/x-red" data-help-name="BeaconScanner">
+    <p><A node to scan for BLE Beacons.</p>
+    <p>This node scans for BLE Beacons (iBeacons/Eddystone/Estimote) and publishes what it finds.</p>
+</script>
+
+<style type="text/css">
+  .node_label_white {
+    fill: white;
+  }
+  .node_label_white_italic {
+    fill: white;
+    font-style: italic;
+  }
+</style>
+
+<script type="text/javascript">
+    RED.nodes.registerType('BeaconScanner', {
+        category: 'input',
+        defaults: {
+            name: {
+                value: ""
+            },
+        },
+        color: "#0D47A1",
+        inputs: 0,
+        outputs: 1,
+        icon: "baseline_bluetooth_searching_white.png",
+        label: function() {
+            return this.name || "Beacon Scanner";
+        },
+        labelStyle: function() {
+            return this.name ? "node_label_white_italic" : "node_label_white";
+        }
+    });
+</script>

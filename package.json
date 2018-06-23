@@ -1,0 +1,35 @@
+{
+  "name": "node-red-contrib-beacon-scanner",
+  "version": "0.0.1",
+  "description": "Node-RED node to retrieve information from BLE Beacons.",
+  "main": "beacon-scanner.js",
+  "scripts": {
+    "test": "echo \"Error: No Test\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joeldavidw/node-red-contrib-beacon-scanner.git"
+  },
+  "keywords": [
+    "node-red",
+    "estimote",
+    "eddystone",
+    "beacon",
+    "ibeacon",
+    "ble"
+  ],
+  "node-red": {
+    "nodes"     : {
+      "beacon-scanner": "beacon-scanner.js"
+    }
+  },
+  "author": "Joel-David Wong",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/joeldavidw/node-red-contrib-beacon-scanner/issues"
+  },
+  "homepage": "https://github.com/joeldavidw/node-red-contrib-beacon-scanner#readme",
+  "dependencies": {
+    "node-beacon-scanner": "~0.0.2"
+  }
+}
