@@ -1,4 +1,4 @@
-<script type="text/x-red" data-help-name="BeaconScanner">
+<script type="text/x-red" data-help-name="beacon-scanner">
     <p><A node to scan for BLE Beacons.</p>
     <p>This node scans for BLE Beacons (iBeacons/Eddystone/Estimote) and publishes what it finds.</p>
 </script>
@@ -13,20 +13,27 @@
   }
 </style>
 
+<script type="text/x-red" data-template-name="beacon-scanner">
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+</script>
+
 <script type="text/javascript">
-    RED.nodes.registerType('BeaconScanner', {
+    RED.nodes.registerType('beacon-scanner', {
         category: 'input',
         defaults: {
             name: {
                 value: ""
-            },
+            }
         },
         color: "#0D47A1",
         inputs: 0,
         outputs: 1,
         icon: "baseline_bluetooth_searching_white.png",
         label: function() {
-            return this.name || "Beacon Scanner";
+            return this.name || "BeaconScanner";
         },
         labelStyle: function() {
             return this.name ? "node_label_white_italic" : "node_label_white";
