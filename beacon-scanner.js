@@ -1,6 +1,6 @@
 module.exports = function(RED) {
     "use strict";
-    const BeaconScanner = require('node-beacon-scanner');
+    const BeaconScanner = require('node-beacon-scanner-duplicates-check');
     const scanner = new BeaconScanner();
 
     function Scanner(n) {
