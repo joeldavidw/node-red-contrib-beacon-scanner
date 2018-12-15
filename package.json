@@ -19,7 +19,7 @@
     "ble"
   ],
   "node-red": {
-    "nodes"     : {
+    "nodes": {
       "beacon-scanner": "beacon-scanner.js"
     }
   },
@@ -30,6 +30,7 @@
   },
   "homepage": "https://github.com/joeldavidw/node-red-contrib-beacon-scanner#readme",
   "dependencies": {
+    "noble": ">=1.8.1",
     "node-beacon-scanner-duplicates-check": "~0.1.1"
   }
 }
