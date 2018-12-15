@@ -9,15 +9,8 @@
         <input type="text" id="node-input-name" placeholder="Name">
     </div>
     <div class="form-row">
-        <label for="node-input-gracePeriod"><i class="fa fa-clock-o"></i> Grace Period</label>
-        <input type="text" value="5000" id="node-input-gracePeriod" placeholder="gracePeriod">
-    </div>
-    <div class="form-row">
-        <label for="node-input-duplicates"><i class=""></i> Allow Duplicates</label>
-        <select id="node-input-duplicates" placeholder="duplicates">
-            <option value="false">False</option>
-            <option selected value="true">True</option>
-        </select>
+        <label for="node-input-gracePeriod"><i class="fa fa-clock-o"></i> Grace Period (0 to allow duplicates)</label>
+        <input type="text" value="0" id="node-input-gracePeriod" placeholder="gracePeriod">
     </div>
 </script>
 
@@ -43,11 +36,8 @@
       name: {
         value: ""
     },
-    duplicates: {
-        value: "true"
-    },
     gracePeriod: {
-        value: 5000
+        value: 0
     },
 },
 color: "#0D47A1",

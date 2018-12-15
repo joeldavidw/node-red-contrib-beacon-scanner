@@ -13,7 +13,7 @@ module.exports = function(RED) {
             });
         };
 
-        scanner.startScan(n.duplicates, n.gracePeriod).then(() => {
+        scanner.startScan(n.gracePeriod).then(() => {
             node.status({
                 fill: "green",
                 shape: "dot",
