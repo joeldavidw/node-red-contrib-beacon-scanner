@@ -7,9 +7,9 @@ Node to allow Node-RED scan for the following beacons:
 
 Dependencies 
 -------
-- Node.js 6 to 8.14.0
-- Noble
-- node-beacon-scanner
+- Node.js 6 to 10 LTS
+- @abandonware/noble
+- node-beacon-scanner-duplicates-check
 
 Installation
 -------
