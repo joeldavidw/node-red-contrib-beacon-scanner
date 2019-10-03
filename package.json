@@ -1,6 +1,6 @@
 {
   "name": "node-red-contrib-beacon-scanner",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "Node-RED node to retrieve information from BLE Beacons.",
   "main": "beacon-scanner.js",
   "scripts": {
@@ -30,7 +30,7 @@
   },
   "homepage": "https://github.com/joeldavidw/node-red-contrib-beacon-scanner#readme",
   "dependencies": {
-    "noble": ">=1.8.1",
-    "node-beacon-scanner-duplicates-check": ">=0.1.5"
+    "@abandonware/noble": ">=1.9.2-5",
+    "node-beacon-scanner-duplicates-check": ">=0.1.6"
   }
 }
