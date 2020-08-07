@@ -1,6 +1,6 @@
 {
   "name": "node-red-contrib-beacon-scanner",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Node-RED node to retrieve information from BLE Beacons.",
   "main": "beacon-scanner.js",
   "scripts": {

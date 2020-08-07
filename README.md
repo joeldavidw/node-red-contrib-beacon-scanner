@@ -13,11 +13,11 @@ Dependencies
 
 Installation
 -------
-#### Raspberry Pi
+#### Ubuntu, Debian, Raspbian
 
 Install Bluetooth drivers required by Noble.
 
-    sudo apt-get install libbluetooth-dev libudev-dev pi-bluetooth
+    sudo apt-get install bluetooth bluez libbluetooth-dev libudev-dev
     sudo setcap cap_net_raw+eip $(eval readlink -f `which node`)
 
 Beacon Scanner
