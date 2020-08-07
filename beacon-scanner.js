@@ -37,5 +37,5 @@ module.exports = function(RED) {
             done();
         });
     }
-    RED.nodes.registerType("BeaconScanner", Scanner);
+    RED.nodes.registerType("Beacon-Scanner", Scanner);
 };
