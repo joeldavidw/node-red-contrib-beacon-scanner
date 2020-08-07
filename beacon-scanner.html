@@ -13,7 +13,7 @@
         <label for="node-input-gracePeriod">Grace Period / Interval (ms)</label>
         <input type="text" value="0" id="node-input-gracePeriod" placeholder="gracePeriod">
     </div>
-    <div class="form-tips"><b>Tip:</b> Grace Period/Interval is used to set an interval between messages with the same ID from being shown again.</div>
+    <div class="form-tips"><b>Tip:</b> Grace Period/Interval is used to set an output interval between messages with the same ID.</div>
 
 </script>
 
@@ -43,10 +43,10 @@
                 value: 0
             },
         },
-        color: "#0D47A1",
+        color: "#3FADB5",
         inputs: 0,
         outputs: 1,
-        icon: "font-awesome/fa-bluetooth-b",
+        icon: "bluetooth_searching-white.svg",
         label: function () {
             return this.name || "BeaconScanner";
         },
