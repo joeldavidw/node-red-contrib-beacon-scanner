@@ -1,9 +1,9 @@
-<script type="text/x-red" data-help-name="BeaconScanner">
+<script type="text/x-red" data-help-name="Beacon-Scanner">
     <p>A node to scan for BLE Beacons.</p>
     <p>This node scans for BLE Beacons (iBeacons/Eddystone/Estimote) and publishes what it finds.</p>
 </script>
 
-<script type="text/x-red" data-template-name="BeaconScanner">
+<script type="text/x-red" data-template-name="Beacon-Scanner">
     <div class="form-row">
         <label for="node-input-name"><i class="icon-tag"></i> Name</label>
         <input type="text" id="node-input-name" placeholder="Name">
@@ -13,18 +13,17 @@
         <input type="text" value="0" id="node-input-gracePeriod" placeholder="gracePeriod">
     </div>
     <div class="form-tips"><b>Tip:</b> Grace Period/Interval is used to set an output interval between messages with the same ID.</div>
-
 </script>
 
 <script type="text/javascript">
-    RED.nodes.registerType('BeaconScanner', {
+    RED.nodes.registerType('Beacon-Scanner', {
         category: 'input',
         defaults: {
             name: {
                 value: "Beacon Scanner"
             },
             gracePeriod: {
-                value: 0
+                value: 1000
             },
         },
         color: "#3FADB5",
