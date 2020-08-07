@@ -1,6 +1,7 @@
 <script type="text/x-red" data-help-name="BeaconScanner">
     <p>A node to scan for BLE Beacons.</p>
     <p>This node scans for BLE Beacons (iBeacons/Eddystone/Estimote) and publishes what it finds.</p>
+
 </script>
 
 <script type="text/x-red" data-template-name="BeaconScanner">
@@ -9,46 +10,47 @@
         <input type="text" id="node-input-name" placeholder="Name">
     </div>
     <div class="form-row">
-        <label for="node-input-gracePeriod"><i class="fa fa-clock-o"></i> Grace Period (0 to allow duplicates)</label>
+        <label for="node-input-gracePeriod"><i class="fa fa-clock-o"></i> Grace Period (Interval) for messages with same UUID to appear</label>
         <input type="text" value="0" id="node-input-gracePeriod" placeholder="gracePeriod">
     </div>
+
 </script>
 
 <style type="text/css">
-.node_label_white {
-    fill: white;
-}
+    .node_label_white {
+        fill: white;
+    }
 
-.node_label_white_italic {
-    fill: white;
-    font-style: italic;
-}
+    .node_label_white_italic {
+        fill: white;
+        font-style: italic;
+    }
 
-#palette_node_BeaconScanner > div.palette_label {
-    color: white;
-}
+    #palette_node_BeaconScanner > div.palette_label {
+        color: white;
+    }
 </style>
 
 <script type="text/javascript">
-  RED.nodes.registerType('BeaconScanner', {
-    category: 'input',
-    defaults: {
-      name: {
-        value: ""
-    },
-    gracePeriod: {
-        value: 0
-    },
-},
-color: "#0D47A1",
-inputs: 0,
-outputs: 1,
-icon: "baseline_bluetooth_searching_white.png",
-label: function () {
-  return this.name || "BeaconScanner";
-},
-labelStyle: function () {
-  return this.name ? "node_label_white_italic" : "node_label_white";
-}
-});
+    RED.nodes.registerType('BeaconScanner', {
+        category: 'input',
+        defaults: {
+            name: {
+                value: ""
+            },
+            gracePeriod: {
+                value: 0
+            },
+        },
+        color: "#0D47A1",
+        inputs: 0,
+        outputs: 1,
+        icon: "baseline_bluetooth_searching_white.png",
+        label: function () {
+            return this.name || "BeaconScanner";
+        },
+        labelStyle: function () {
+            return this.name ? "node_label_white_italic" : "node_label_white";
+        }
+    });
 </script>

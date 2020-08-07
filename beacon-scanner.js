@@ -2,6 +2,7 @@ module.exports = function(RED) {
     "use strict";
     const BeaconScanner = require('node-beacon-scanner-duplicates-check');
     const scanner = new BeaconScanner();
+    let _gracePeriod = 0
 
     function Scanner(n) {
         RED.nodes.createNode(this, n);
@@ -13,7 +14,11 @@ module.exports = function(RED) {
             });
         };
 
-        scanner.startScan(n.gracePeriod).then(() => {
+        if (typeof n.gracePeriod !== 'undefined') {
+            _gracePeriod = n.gracePeriod
+        }
+
+        scanner.startScan(_gracePeriod).then(() => {
             node.status({
                 fill: "green",
                 shape: "dot",
